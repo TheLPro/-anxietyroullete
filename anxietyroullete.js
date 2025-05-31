@@ -75,6 +75,7 @@ function ruinTheFun() {
         let tuff = new Audio("tuff.mp3");
         tuff.volume = 2;
         tuff.play();
+        console.log("tuff");
       
         let interval = setInterval(() => {
           // Flash crazy background colors
