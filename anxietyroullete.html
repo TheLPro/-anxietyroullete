@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Anxiety Roullete</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                background-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00);
+                background-size: 300% 100%;
+                animation: identifier 10s ease infinite;
+            }
+            @keyframes identifier {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+                
+            }
+            button, p {
+                z-index: 2000;
+            }
+            .container {
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            .buttons {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            button {
+                width: 200px;
+                height: 50px;
+                margin: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                border: none;
+                box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.3);
+                transition: all 5s ease;
+            }
+            button:hover {
+                background-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00);
+                background-size: 300% 100%;
+                animation: identifier 10s ease infinite;
+            }
+            button:active {
+                box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+                transform: scale(0.00001);
+            }
+            progress {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                border-radius: 0;
+                border: none;
+            }
+            progress[value]::-webkit-progress-value {
+                background: white;
+            }
+            progress[value]::-webkit-progress-bar {
+                background: transparent;
+            }
+            p {
+                position: fixed;
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 24px;
+                color: #000;
+                font-family: 'Arial';
+                font-weight: bold;
+            }
+            .controls {
+                position: fixed;
+                bottom: 0px;
+                width: 100%;
+                left: 0;
+            }
+            input[type="range"] {
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+                left: 0;
+                margin: 0;
+                border-radius: 0;
+                -webkit-appearance: none;
+                background-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00);
+                background-size: 300% 100%;
+                animation: identifier 10s ease infinite;
+                animation-delay: 5s;
+            }
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 20px;
+                height: 20px;
+                background: white;
+                border-radius: 50%;
+                box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.3);
+                cursor: pointer;
+            }
+            input[type="range"]::-webkit-slider-thumb:hover {
+                background-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00);
+                background-size: 300% 100%;
+                animation: identifier 10s ease infinite;
+            }
+        </style>
+    </head>
+    <body>
+
+        <progress id="streak" value="" max="10"></progress>
+        <p id="counter"></p>
+        <div class="container">
+            <div class="buttons">
+                <button onclick="runRoullete();">Run</button>
+                <button onclick="ruinTheFun();">Ruin the fun</button>
+            </div>
+        </div>
+        <div class="controls">
+            <input type="range" name="range" id="speed" min="0" max="2" step="0.01" value="1">
+        </div>
+
+        <script src="anxietyroullete.js" async defer></script>
+    </body>
+</html>
