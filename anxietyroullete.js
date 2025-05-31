@@ -71,6 +71,10 @@ function ruinTheFun() {
         let progressBar = document.getElementById('streak');
         let buttons = document.querySelectorAll('button');
         let speedInput = document.getElementById('speed');
+
+        let tuff = new Audio("tuff.mp3");
+        tuff.volume = 2;
+        tuff.play();
       
         let interval = setInterval(() => {
           // Flash crazy background colors
