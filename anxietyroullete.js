@@ -41,6 +41,7 @@ function runRoullete() {
         counter.innerText = "Streak " + localStorage.getItem('streak') || 0;
         progressBar.value = localStorage.getItem('streak') || 0;
         if (localStorage.getItem('streak') == 10 {
+            currentAudio.stop();
             startStrokeMode();
         }
     }, 20000 / currentAudio.playbackRate); // Stop after 10 seconds
