@@ -73,7 +73,7 @@ function ruinTheFun() {
         let speedInput = document.getElementById('speed');
 
         let tuff = new Audio("tuff.mp3");
-        tuff.volume = 2;
+        tuff.volume = 1;
         tuff.play();
         console.log("tuff");
       
