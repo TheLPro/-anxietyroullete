@@ -40,7 +40,7 @@ function runRoullete() {
     setTimeout(() => {
         counter.innerText = "Streak " + localStorage.getItem('streak') || 0;
         progressBar.value = localStorage.getItem('streak') || 0;
-        if (localStorage.getItem('streak') == 10 {
+        if (localStorage.getItem('streak') == 10) {
             currentAudio.stop();
             startStrokeMode();
         }
